@@ -1,0 +1,4 @@
+<article class="route_content">
+  <%= raw rendered_markdown(example['route_summary'].strip_heredoc) if example['route_summary'] %>
+  <%= raw rendered_markdown(example['route_description'].strip_heredoc) if example['route_description'] %>
+</article>
