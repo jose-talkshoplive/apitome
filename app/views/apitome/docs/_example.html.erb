@@ -7,6 +7,7 @@
 <% example['requests'].each_with_index do |request, index| %>
   <div id="<%= "request-#{index}" %>">
     <h3><%= t(:request, scope: :apitome) %></h3>
+    <%= render partial: 'apitome/docs/route_content' if example['route_summary'] || example['route_description']%>
     <div class="request">
       <% begin %>
       <%= render partial: 'apitome/docs/route',    locals: {request: request, index: index} %>
